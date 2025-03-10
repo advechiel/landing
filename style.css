@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+body {
+  background: #fff;
+  color: #000000;
+}
+
+main {
+    width: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 30px 0px;
+  font-size: 30px;
+}
+
+.ponomar-regular {
+  font-family: "Ponomar", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: justify;
+}
+
+/* header  */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  position: sticky;
+  z-index: 1;
+  /* para que esté por encima del resto del contenido */
+  top: 0;
+  /* Se queda pegado en la parte superior */
+}
+
+img {
+  width: 50px;
+  height: auto;
+}
+
+nav.social-icons {
+  display: flex;
+  gap: 30px;
+  /* Sdistancia entre iconos */
+  align-items: center;
+  justify-content: flex-end;
+}
+
+nav img {
+  width: 25px;
+  justify-content: flex-end;
+  height: auto;
+}
+
+/* recibirdor */
+.album-detail img {
+  display: block;
+  max-width: 100%;
+}
+
+.album-info {
+  max-width: 100%;
+}
+
+.contents-obj img {
+  width: 100%;
+}
+
+/* Estilos de las imágenes */
+/* Image slider */
+.container {
+  padding: 2rem;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  /* Evita que las imágenes se desborden del contenedor padre */
+  scroll-snap-type: x mandatory;
+  /* La propiedad CSS scroll-snap-type se establece en un contenedor de desplazamiento, 
+  optando por el ajuste de desplazamiento estableciendo la dirección y 
+  el rigor de la aplicación del punto de acoplamiento dentro del puerto de ajuste. */
+  scroll-behavior: smooth;
+  /* La propiedad CSS scroll-behavior establece el comportamiento de un cuadro de desplazamiento cuando el desplazamiento 
+  se desencadena mediante las API de navegación o de desplazamiento de CSSOM. */
+  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  /* 1 y 2 valores: eje de posición de la sombra,  
+       3 valor: Blur o difuminado,
+       4 valor: Amplitud del difuminado,
+       5 valor: color de la sombra
+    */
+  border-radius: 1rem;
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  /* La propiedad especifica la posición de ajuste de la caja como una alineación de su área de ajuste (como el asunto de alineación) 
+  dentro del puerto de ajuste de su contenedor de alineación (como el contenedor de alineación). */
+  /* Mantiene la proporción */
+  object-fit: cover;
+}
+
+.slider-nav {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  width: 800px;
+  margin-top: -40px;
+  z-index: 0;
+}
+
+.slider-nav a:hover {
+  opacity: 1;
+}
+
+.m-btn {
+  border: 2px solid rgb(205, 202, 239);
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.m-btn:not(:last-child) {
+  margin-right: 30px;
+}
+
+.m-btn:hover {
+  opacity: 0.5;
+}
+
+/* botones de tipo radio que cambian la imagen del carrusel*/
+#radio1:checked ~ .slide-1 {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .slide-1 {
+  margin-left: -105%;
+}
+
+#radio3:checked ~ .slide-1 {
+  margin-left: -205%;
+}
+
+.perfil-container {
+    display: flex;
+    justify-content: center;
+    padding: 0 25px;
+    width: 100%;
+}
+
+/* descripcion, perfil de spoty */
+.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  /* Permite que los elementos se acomoden si no hay espacio */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+}
+
+/* Estilos del texto */
+.texto {
+  flex: 1;
+  /* Se adapta al espacio disponible */
+  min-width: 400px;
+  /* Evita que se haga demasiado pequeño */
+  max-width: 600px;
+  /* Controla el tamaño máximo */
+  text-align: left;
+  /* Asegura alineación de texto */
+}
+
+/* Estilos de la sección de Spotify */
+.portada {
+  flex: 1;
+  /* Se adapta al espacio disponible */
+  display: flex;
+  justify-content: center;
+  /* Centra el iframe */
+}
+
+.portada iframe {
+  width: 100%;
+  /* Se ajusta al tamaño del contenedor */
+  max-width: 500px;
+  /* Controla el tamaño máximo */
+  height: 350px;
+}
+
+/* ajustes de botones */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #a67c52;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8c6239;
+}
+
+.footend {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.footend .tracklist-title {
+  width: 110px;
+}
+
+.footend .tracklist {
+  width: 50%;
+  filter: brightness(1.1);
+  padding-bottom: 25px;
+}
+
+.footend .last {
+  width: 5vw;
+  margin: 0 auto;
+}
+
+/* footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #171717;
+  color: azure;
+}
+
+@media(max-width: 1440px) {
+    .perfil {
+        align-items: center;
+        flex-direction: column;
+    }
+    .portada {
+        width: 100%;
+    }
+}

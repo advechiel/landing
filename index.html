@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Right Place Wrong Person</title>
+  <link rel="icon" type="image/png" href="Imagenes/logopag.jpg" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tipografía de google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ponomar&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header, logo y barra de navegacion -->
+  <header>
+    <div class="logo">
+      <img src="Imagenes/Recurso 3@4x.png" alt="Logo del álbum"/>
+    </div>
+
+    <nav class="social-icons">
+      <a href="https://www.instagram.com/rpwprpwprpwp/"><img src="Imagenes/instagram (2).png" alt="Instagram" /></a>
+      <a href="https://open.spotify.com/intl-es/artist/2auC28zjQyVTsiZKNgPRGs"><img src="Imagenes/spotify-logo.png"
+          alt="Spotify" /></a>
+      <a href="https://www.youtube.com/channel/UCJCAlMsCuld3v96t-9SffdA"><img src="Imagenes/youtube.png"
+          alt="Youtube" /></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="album-info">
+      <div class="con">
+        <div class="contents-obj">
+          <img src="./Imagenes/img-main-desktop.png" class="pc-only" alt="RM, Right Place, Wrong Person">
+    
+        </div>
+      </div>
+    </section>
+    
+    <!-- Fotografias del album -->
+    <section>
+      <h1> Concept photos</h1>
+      <section class="container">
+        <div class="slider-wrapper">
+          <div class="slider">
+            <!-- Se utiliza inputs de tipo radio como pseudobotones para cambiar la imagen en el slider-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <!-- Se toma de referencia la imagen con la clase slide-1 para cambiar de posición con las otras imágenes -->
+            <img src="https://ibighit.com/bts/images/bts/discography/rm/rpwp/photo2/image_01.jpg" alt="Imagen 3"
+              class="slide-1" width="490px" height="490px">
+            <img src="https://ibighit.com/bts/images/bts/discography/rm/rpwp/photo3/origin/image_06.jpg" alt="Imagen 4"
+              width="490px" height="490px">
+            <img src="https://ibighit.com/bts/images/bts/discography/rm/rpwp/photo3/image_01.jpg" alt="Imagen 5"
+              width="490px" height="490px">
+          </div>
+          <div class="slider-nav">
+            <!-- Etiqueta Label para representar el botón de tipo radio en el DOM(HTML) -->
+            <label for="radio1" class="m-btn"></label>
+            <label for="radio2" class="m-btn"></label>
+            <label for="radio3" class="m-btn"></label>
+          </div>
+        </div>
+      </section>
+    
+      <div id="player">
+      </div>
+      .<!-- spotify perfil iframe-->
+      <h2>Get to know the creator</h2>
+      <section class="perfil-container">
+        <article class="perfil">
+          <div class="texto">
+            <p>
+              Kim Namjoon, conocido por su nombre artistico RM, líder de BTS; ha
+              destacado como rapero, productor y compositor, en 2024, lanzó "Right Place, Wrong Person",
+              siendo el segundo álbum de estudio del artista, lanzado el 24 de mayo.
+              Con un sonido más experimental y alternativo, el disco incluye el
+              sencillo "Come Back to Me" y colaboraciones con Little Simz, Domi & JD
+              Beck y Moses Sumney. El álbum fue elogiado por la crítica por su
+              introspección y fusión de géneros, debutando en el top 5 del Billboard
+              200 y liderando la lista de Top Rap Albums. Para complementar el
+              lanzamiento, RM estrenó el documental "Right People, Wrong Place",
+              mostrando su proceso creativo y visión artística.
+            </p>
+          </div>
+    
+          <div class="portada">
+            <iframe style="border-radius: 12px"
+              src="https://open.spotify.com/embed/album/512dQp7hBbDDurodCqSw5I?utm_source=generator" width="100%"
+              height="352" frameborder="0" allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+    
+      </section>
+    </section>
+    <section>
+      <article class="footend">
+        <img src="./Imagenes/title-tracklist.png" alt="Tracklist" class="tracklist-title">
+        <img src="./Imagenes/tracklist.jpg" alt="album tracklist" class="tracklist">
+        <img src="./Imagenes/last.png" alt="right place, wrong person" class="last">
+      </article>
+    </section>
+  </main>
+    <footer>
+      <p>
+        &copy; 2025 Right Place Wrong Person. Todos los derechos reservados.
+      </p>
+    </footer>
+</body>
+
+</html>
