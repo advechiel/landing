@@ -11,7 +11,7 @@ body {
 }
 
 main {
-    width: 100%;
+  width: 100%;
 }
 
 h1,
@@ -97,12 +97,9 @@ nav img {
   overflow: hidden;
   /* Evita que las imágenes se desborden del contenedor padre */
   scroll-snap-type: x mandatory;
-  /* La propiedad CSS scroll-snap-type se establece en un contenedor de desplazamiento, 
-  optando por el ajuste de desplazamiento estableciendo la dirección y 
-  el rigor de la aplicación del punto de acoplamiento dentro del puerto de ajuste. */
+  /* */
   scroll-behavior: smooth;
-  /* La propiedad CSS scroll-behavior establece el comportamiento de un cuadro de desplazamiento cuando el desplazamiento 
-  se desencadena mediante las API de navegación o de desplazamiento de CSSOM. */
+  /* comportamiento de transicion */
   box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   /* 1 y 2 valores: eje de posición de la sombra,  
        3 valor: Blur o difuminado,
@@ -115,8 +112,7 @@ nav img {
 .slider img {
   flex: 1 0 100%;
   scroll-snap-align: start;
-  /* La propiedad especifica la posición de ajuste de la caja como una alineación de su área de ajuste (como el asunto de alineación) 
-  dentro del puerto de ajuste de su contenedor de alineación (como el contenedor de alineación). */
+  /* empieza de derecha a izquierda el scroll. */
   /* Mantiene la proporción */
   object-fit: cover;
 }
@@ -172,14 +168,14 @@ nav img {
   margin-left: -205%;
 }
 
+/* descripcion, perfil de spoty */
 .perfil-container {
-    display: flex;
-    justify-content: center;
-    padding: 0 25px;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 25px;
+  width: 100%;
 }
 
-/* descripcion, perfil de spoty */
 .perfil {
   display: flex;
   flex-wrap: wrap;
@@ -195,28 +191,22 @@ nav img {
   flex: 1;
   /* Se adapta al espacio disponible */
   min-width: 400px;
-  /* Evita que se haga demasiado pequeño */
   max-width: 600px;
-  /* Controla el tamaño máximo */
   text-align: left;
-  /* Asegura alineación de texto */
 }
 
 /* Estilos de la sección de Spotify */
 .portada {
   flex: 1;
-  /* Se adapta al espacio disponible */
   display: flex;
   justify-content: center;
-  /* Centra el iframe */
 }
 
 .portada iframe {
   width: 100%;
-  /* Se ajusta al tamaño del contenedor */
   max-width: 500px;
-  /* Controla el tamaño máximo */
   height: 350px;
+  display: flex;
 }
 
 /* ajustes de botones */
@@ -267,12 +257,14 @@ footer {
   color: azure;
 }
 
-@media(max-width: 1440px) {
-    .perfil {
-        align-items: center;
-        flex-direction: column;
-    }
-    .portada {
-        width: 100%;
-    }
+/* este responsive con mediaqrin lo puse por la ifram de spotify ya que causaba un desbordamiento */
+
+@media (max-width: 1440px) {
+  .perfil {
+    align-items: center;
+    flex-direction: column;
+  }
+  .portada {
+    width: 100%;
+  }
 }
