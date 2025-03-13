@@ -159,7 +159,7 @@ nav img {
 #radio1:checked ~ .slide-1 {
   margin-left: 0;
 }
-
+/*Id: pseudoclase, linkeadorde la slide 1 a la dos */
 #radio2:checked ~ .slide-1 {
   margin-left: -105%;
 }
