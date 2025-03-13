@@ -155,7 +155,7 @@ nav img {
   opacity: 0.5;
 }
 
-/* botones de tipo radio que cambian la imagen del carrusel*/
+/* ID, bbotones de tipo radio que cambian la imagen del carrusel*/
 #radio1:checked ~ .slide-1 {
   margin-left: 0;
 }
